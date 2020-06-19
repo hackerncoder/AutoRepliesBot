@@ -23,11 +23,14 @@ subreddit = reddit.subreddit('pythonforengineers')
 #Read the 5 newest posts (luckily r/TOR isnt that active)
 for submission in subreddit.new(limit=1):
 	#Check to ensure we don't spam a post
-	if submission.id not in posts_replied_to:
+        if submission.id not in posts_replied_to:
             if re.search("vpn", submission.selftext, re.IGNORECASE): 
                     #FUCK. I need to find a way to ensure it anwsers to only the correct posts, but this is only v0.1, and I am going to need some devs that know best pratices.
-                #Now reply.
-                submission.reply("Hi!\n\nIt seems you have posted about VPNs. Please read more about them.\n\nBecause I haven't taken the time to write this bot.")
+                
+                #Put everything in a file to make this code just a little more readable, not efficent my ass, if you know how to do it bette, well then do it!
+                with open("reply.txt", "r") as f:
+                    #Now reply
+                    submission.reply(f.read())
                 print("Bot replying to: ", submission.title)
 
                 #Add the post to our list
