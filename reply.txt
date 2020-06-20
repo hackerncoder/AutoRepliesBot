@@ -1,1 +1,49 @@
-Test!
+Hello!
+
+It seems you have posted about VPNs.
+
+I am here to tell you that using Tor with a VPN is not recommended, even by [the Tor project themselfs](https://support.torproject.org/#faq-5)
+
+#Reasons why not:
+
+ 1. You have to trust they wont keep logs.
+
+You can't verify if they keep logs.
+
+*But my provider would lose business if it was found out*
+
+Look up the [**widely publicized** story about HideMyAss](https://support.torproject.org/#faq-5), HideMyAss is still running right? Most customers either don't care ir aren't even aware of it.
+
+And while used with Tor they can't see what you are doing, they can still make it easier for correlation attacks. No need to run entry nodes when you are paying someone to do it.
+
+ 1.1 They can log more
+
+VPNs can log everything, where you are connecting from, and to, what you are sending. If someone high enough or with enough access wants to, they can log a lot of things.
+
+Tor voulenteers (remember that they choose to run it) can't log too much. 
+
+Guard nodes can log where you are connecting to and which middle node you are connecting to. 
+
+Exit nodes can log where you are connecting to and what you are sending and which middle node you are connecting to. 
+
+These two guard and exit nodes would then have to talk together. And you aren't using the same exit node all the time, in fact, you are switching what exit node (and middle node) you are using on each website. 
+
+ 2.  It wont hide your IP from someone that can break Tor.
+
+If someone can break Tor, do you really belive they will be stopped by a VPN?
+
+They are probably a government, so they can extract info using the legal system. Or using ISPs. Or just compromise the VPN provider, which is easier than compromising "enough" of the 1000 Tor exit nodes and "enough" of the 2500 guard nodes. 
+
+And if you don't want to hide your IP from someone that can break Tor, but just the entry node. Why?
+
+You're could possibly be removing anonymity, to hide your IP from the entry node, which is made to ensure your anonymity. You don't just create a Tor guard node, it can take 8 to 60 days to get up to full speed as a guard node, and that costs money.
+
+ 3. There is a (money) trail. Also, you're paying.
+
+If you want anything decent when it comes to VPNs, you're going to have to pay. And that means a money trail.
+
+*But I pay with <something anonymous>*
+
+And you still connect with your real IP.
+
+
