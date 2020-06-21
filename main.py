@@ -14,11 +14,11 @@ if not os.path.isfile("posts_replied_to.txt"):
 else:
     with open("posts_replied_to.txt", "r") as f:
         posts_replied_to = f.read()
-	posts_replied_to = posts_replied_to.split("\n")
-	posts_replied_to = list(filter(None, posts_replied_to))
+        posts_replied_to = posts_replied_to.split("\n")
+        posts_replied_to = list(filter(None, posts_replied_to))
 
 #Point the bot at r/TOR
-subreddit = reddit.subreddit('TOR')
+subreddit = reddit.subreddit('autorepliesbot')
 
 #Read the 5 newest posts (luckily r/TOR isnt that active)
 for submission in subreddit.new(limit=5):
@@ -30,7 +30,7 @@ for submission in subreddit.new(limit=5):
                 #RE is regex, anyone that knows regex please help create a string that correctly identifies posts.
 
             #Check for markers for anti-vpn (don't want to add a comment saying VPN bad to someone saying they aren't using vpn)
-            if re.search("\bdon(\')*t use( a)* vpn\b|\bdidn(\')*t use( a)* vpn\b|\bnot using( a)* vpn\b|will not( be)* us(e|ing)( a)* vpn", submission.selftext, re.IGNORECASE):
+            if not re.search("\bdon(\')*t use( a)* vpn\b|\bdidn(\')*t use( a)* vpn\b|\bnot using( a)* vpn\b|will not( be)* us(e|ing)( a)* vpn", submission.selftext, re.IGNORECASE):
             
                 #Put everything in a file to make this code just a little more readable.
                 with open("vpnReply.txt", "r") as f:
@@ -38,10 +38,10 @@ for submission in subreddit.new(limit=5):
                     #Now reply
                     submission.reply(f.read())
             
-            print("Bot replying to: ", submission.title)
+                print("Bot replying to: ", submission.title)
 
-            #Add the post to our list
-            posts_replied_to.append(submission.id)
+                #Add the post to our list
+                posts_replied_to.append(submission.id)
         
         #Working on letterboxing 
         #if re.search("fill(.*)screen|full(.*)(screen|window)|entire(.*)screen", submission.title, re.IGNORECASE)
