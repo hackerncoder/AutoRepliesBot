@@ -29,11 +29,11 @@ for submission in subreddit.new(limit=5):
         if re.search("vpn", submission.selftext, re.IGNORECASE):
                 #RE is regex, anyone that knows regex please help create a string that correctly identifies posts.
 
-                #Check for markers for anti-vpn (don't want to add a comment saying VPN bad to someone saying they aren't using vpn)
-            if re.search("\bdon(\')*t use( a)* vpn\b|\bdidn(\')*t use( a)* vpn\b|\bnot using( a)* vpn\b|will not( be)* us(e|ing)( a)* vpn")
+            #Check for markers for anti-vpn (don't want to add a comment saying VPN bad to someone saying they aren't using vpn)
+            if re.search("\bdon(\')*t use( a)* vpn\b|\bdidn(\')*t use( a)* vpn\b|\bnot using( a)* vpn\b|will not( be)* us(e|ing)( a)* vpn", submission.selftext, re.IGNORECASE):
             
-            #Put everything in a file to make this code just a little more readable.
-                with open("reply.txt", "r") as f:
+                #Put everything in a file to make this code just a little more readable.
+                with open("vpnReply.txt", "r") as f:
                     
                     #Now reply
                     submission.reply(f.read())
@@ -42,6 +42,19 @@ for submission in subreddit.new(limit=5):
 
             #Add the post to our list
             posts_replied_to.append(submission.id)
+        
+        #Working on letterboxing 
+        #if re.search("fill(.*)screen|full(.*)(screen|window)|entire(.*)screen", submission.title, re.IGNORECASE)
+                #I have seen some people use border, want to look into ensuring they are also caught in the regex. - EncMsg
+
+            #with open("vpnReply.txt", "r") as f:
+            #    submission.reply(f.read())
+            #print("Bot replying to: ", submission.title)
+            #posts_replied_to.append(submission.id)
+
+        #Working on IOS
+        #if re.search("tor(.*)ios", submission.title, re.IGNORECASE)
+                #The current regex would pull in too many false-positivies. - EncMsg
 
 #Overwrite the posts_replied_to.txt with current list
 with open("posts_replied_to.txt", "w") as f:
