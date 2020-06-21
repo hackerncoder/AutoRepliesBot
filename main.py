@@ -47,7 +47,7 @@ for submission in subreddit.new(limit=5):
         #if re.search("fill(.*)screen|full(.*)(screen|window)|entire(.*)screen", submission.title, re.IGNORECASE)
                 #I have seen some people use border, want to look into ensuring they are also caught in the regex. - EncMsg
 
-            #with open("vpnReply.txt", "r") as f:
+            #with open("lbReply.txt", "r") as f:
             #    submission.reply(f.read())
             #print("Bot replying to: ", submission.title)
             #posts_replied_to.append(submission.id)
