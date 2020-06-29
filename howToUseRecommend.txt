@@ -1,0 +1,23 @@
+Here are just a few ways of using recommend(ed):
+
+	I do not recommend using a VPN
+
+	Using a VPN is not recommended
+
+	I know it is not recommended that you use a VPN
+
+	I know it is not recommended to use Tor (with|over) a vpn
+
+	I know it is not recommended to use vpn
+
+	I know it is not recommended that you use tor with a vpn
+
+
+And then there is this shit you have to remember:
+
+	I know it((')*s| is not)
+
+
+Please kill me
+
+- EncMSG

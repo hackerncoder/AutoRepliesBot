@@ -29,8 +29,13 @@ for submission in subreddit.new(limit=5):
         if re.search("vpn", submission.selftext, re.IGNORECASE):
                 #RE is regex, anyone that knows regex please help create a string that correctly identifies posts.
 
-            #Check for markers for anti-vpn (don't want to add a comment saying VPN bad to someone saying they aren't using vpn)
-            if not re.search("\bdon(\')*t use( a)* vpn\b|\bdidn(\')*t use( a)* vpn\b|\bnot using( a)* vpn\b|will not( be)* us(e|ing)( a)* vpn", submission.selftext, re.IGNORECASE):
+            #Check for markers for anti-vpn (don't want to add a comment saying VPN bad to someone saying they aren't using vpn).
+            #"Recommend(ed)" Is not fun to do, you could phrase it in so many ways. Check the added txt file - EncMsg
+            if not re.search("don(\')*t use( a)* vpn|\
+                    didn(\')*t use( a)* vpn|\
+                    should not (be )* us(e|ing) (a )*vpn|\
+                    not using( a)* vpn|\
+                    will not( be)* us(e|ing)( a)* vpn", submission.selftext, re.IGNORECASE):
             
                 #Put everything in a file to make this code just a little more readable.
                 with open("vpnReply.txt", "r") as f:
@@ -55,6 +60,8 @@ for submission in subreddit.new(limit=5):
         #Working on IOS
         #if re.search("tor(.*)ios", submission.title, re.IGNORECASE)
                 #The current regex would pull in too many false-positivies. - EncMsg
+
+        #I remember seeing so many things that could be automated. PLEASE SOMEONE HELP ME. - EncMsg 
 
 #Overwrite the posts_replied_to.txt with current list
 with open("posts_replied_to.txt", "w") as f:
