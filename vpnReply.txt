@@ -2,42 +2,27 @@ Hello!
 
 It seems you have posted about VPNs.
 
-I am here to tell you that using Tor with a VPN is not recommended, even by [the Tor project themselfs](https://support.torproject.org/#faq-5)
+I am here to tell you that using Tor with a VPN is not recommended, [even by the Tor project](https://support.torproject.org/#faq-5)
 
-#Reasons why not:
+## Reasons why not:
 
- 1. You have to trust they wont keep logs.
+ 1. You have to trust them.
+
+ - That they don't keep logs
 
 You can't verify if they keep logs.
 
-*But my provider would lose business if it was found out*
+*But my provider would lose business if it was found out*  
+Look up the [story about HideMyAss](https://www.theregister.co.uk/2011/09/26/hidemyass_lulzsec_controversy/), HideMyAss is still running right? Most customers either don't care or aren't even aware of it.
 
-Look up the [**publicized** story about HideMyAss](https://www.theregister.co.uk/2011/09/26/hidemyass_lulzsec_controversy/), HideMyAss is still running right? Most customers either don't care or aren't even aware of it.
+And while used with Tor they can't see what you are doing, they can still make it easier for correlation attacks. No need to run entry nodes when you are paying someone to do it.  
+Because (you need to trust):
 
-And while used with Tor they can't see what you are doing, they can still make it easier for correlation attacks. No need to run entry nodes when you are paying someone to do it.
+ - That they don't share or allow anyone to snoop
 
- 1.1 They can log more
+ - That they are competent at keeping everything secure.
 
-VPNs can log everything, where you are connecting from, and to, what you are sending. If someone high enough or with enough access wants to, they can log a lot of things.
-
-Tor voulenteers (remember that they choose to run it) can't log too much. 
-
-Guard nodes can log where you are connecting to and which middle node you are connecting to. 
-
-Exit nodes can log where you are connecting to and what you are sending and which middle node you are connecting to. 
-
-These two guard and exit nodes would then have to talk together. And you aren't using the same exit node all the time, in fact, you are switching what exit node (and middle node) you are using on each website. You don't switch VPN server that often.
-
- 2.  It wont hide your IP from someone that can break Tor
-If someone can break Tor, do you really belive they will be stopped by a VPN?
-
-They are probably a government, so they can extract info using the legal system. Or using ISPs. Or just compromise the VPN provider, which is easier than compromising "enough" of the 1000 Tor exit nodes and "enough" of the 2500 guard nodes. 
-
-And if you don't want to hide your IP from someone that can break Tor, but just the entry node. Why?
-
-You could possibly be removing anonymity, to hide your IP from the entry node, which is made to ensure your anonymity.
-
- 3. There is a (money) trail. Also, you're paying.
+ 2. There is a (money) trail. Also, you're paying.
 
 If you want anything decent when it comes to VPNs, you're going to have to pay. And that means a money trail.
 
@@ -45,7 +30,16 @@ If you want anything decent when it comes to VPNs, you're going to have to pay. 
 
 And you still connect with your real IP.
 
- 4. If Tor is blocked use bridges.
+ 3.  It wont hide your IP from someone that can break Tor
+
+If someone can break Tor, do you really belive they will be stopped by a VPN?
+
+They are probably a government, so they can extract info using the legal system. Or using ISPs. Or just compromise the VPN provider, which is easier than compromising "enough" of the 1000 Tor exit nodes and "enough" of the 2500 guard nodes. 
+
+And if you don't want to hide your IP from someone that can break Tor, but just the entry node. Why?  
+You could possibly be removing anonymity, to hide your IP from the entry node, which is made to ensure your anonymity.
+
+ 4. If Tor is blocked (use bridges).
 
 If you are using a VPN because Tor is blocked, try using a bridge, reasons why:
 
@@ -53,14 +47,11 @@ If you are using a VPN because Tor is blocked, try using a bridge, reasons why:
 
  - They are made for Tor
 
- - Some of them are made to look like regular HTTPS traffic, going to microsoft or amazons cloud.
+ - Some of them are made to look like regular HTTPS traffic. And some look like they are going to microsoft or amazons cloud.
 
-If bridges don't work, then you can try using a VPN.
+If bridges don't work, then you can try using a VPN. But I do doubt if using a VPN will actually help.
 
-Or if you are trying to hide Tor usage:
-
-Tor isn't bad, unless you are in a country where Tor is banned (then you should look at the above statment).
-
-You help Tor by using it, and Tor isn't something you need to hide, by proudly using it, you are helping with the bad stigma.
-
-And if you are hiding it because you belive you will be put on a list. Well, [there are 2.8 million Tor users](https://metrics.torproject.org/userstats-relay-country.html), too many to keep a list on.
+But if you are trying to hide Tor usage, but not because it could land you in jail or killed:  
+Tor isn't bad, unless you are in a country where Tor is banned (or some other form of anti-Tor) (then you should look at the above statment).  
+You help Tor by using it, and Tor isn't something you need to hide, by proudly using it, you are helping with the bad stigma.  
+And if you are hiding it because you belive you will be put on a list. Well, [there are 2 (or more) million (international) Tor users](https://metrics.torproject.org/userstats-relay-country.html), too many to keep a list on.
