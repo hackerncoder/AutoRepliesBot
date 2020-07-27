@@ -18,7 +18,7 @@ else:
         posts_replied_to = list(filter(None, posts_replied_to))
 
 #Point the bot at r/TOR
-subreddit = reddit.subreddit('autorepliesbot')
+subreddit = reddit.subreddit('tor')
 
 #Read the 5 newest posts (luckily r/TOR isnt that active)
 for submission in subreddit.new(limit=5):
@@ -50,7 +50,9 @@ for submission in subreddit.new(limit=5):
         
         #Working on letterboxing 
         #if re.search("fill(.*)screen|full(.*)(screen|window)|entire(.*)screen", submission.title, re.IGNORECASE)
-                #I have seen some people use border, want to look into ensuring they are also caught in the regex. - EncMsg
+                #I have seen some people use:
+                # (white|black) border(s), padding(s), bar(s)
+                #I want to look into ensuring they are also caught in the regex. - EncMsg
 
             #with open("lbReply.txt", "r") as f:
             #    submission.reply(f.read())

@@ -1,57 +1,18 @@
-Hello!
+Hi!
 
-It seems you have posted about VPNs.
+I'm a bot. And I am here to tell you, that you should probably not use a VPN.
 
-I am here to tell you that using Tor with a VPN is not recommended, [even by the Tor project](https://support.torproject.org/#faq-5)
+I am not going to write a gigantic (and probably incorrect, bad or something else) post on why you shouldn't since there are so many others that have already done that.
 
-## Reasons why not:
+Here is a quick summary:  
+If you use VPN to conceal Tor usage: If Tor isn't banned or blocked, you might not need it. Else, use bridges.
 
- 1. You have to trust them.
+* [VPN + Tor: Not Necessarily a Net Gain](https://matt.traudt.xyz/posts/vpn-tor-not-mRikAa4h.html) By Matt Traudt (aka system33- here on reddit, great person btw.)
+* [r/Tor wiki](https://www.reddit.com/r/TOR/wiki/index#wiki_should_i_use_a_vpn_with_tor.3F_tor_over_vpn.2C_or_vpn_over_tor.3F)
+* [Obscurix: VPNs](https://obscurix.github.io/vpns.html) (Has a section about [the TorPlusVpn on trac.torproject.org](https://trac.torproject.org/projects/tor/wiki/doc/TorPlusVPN), which you should read to understand whenever someone uses it as "Tor project recommends Tor+VPN")
 
- - That they don't keep logs
+-----
 
-You can't verify if they keep logs.
-
-*But my provider would lose business if it was found out*  
-Look up the [story about HideMyAss](https://www.theregister.co.uk/2011/09/26/hidemyass_lulzsec_controversy/), HideMyAss is still running right? Most customers either don't care or aren't even aware of it.
-
-And while used with Tor they can't see what you are doing, they can still make it easier for correlation attacks. No need to run entry nodes when you are paying someone to do it.  
-Because (you need to trust):
-
- - That they don't share or allow anyone to snoop
-
- - That they are competent at keeping everything secure.
-
- 2. There is a (money) trail. Also, you're paying.
-
-If you want anything decent when it comes to VPNs, you're going to have to pay. And that means a money trail.
-
-*But I pay with <something anonymous>*
-
-And you still connect with your real IP.
-
- 3.  It wont hide your IP from someone that can break Tor
-
-If someone can break Tor, do you really belive they will be stopped by a VPN?
-
-They are probably a government, so they can extract info using the legal system. Or using ISPs. Or just compromise the VPN provider, which is easier than compromising "enough" of the 1000 Tor exit nodes and "enough" of the 2500 guard nodes. 
-
-And if you don't want to hide your IP from someone that can break Tor, but just the entry node. Why?  
-You could possibly be removing anonymity, to hide your IP from the entry node, which is made to ensure your anonymity.
-
- 4. If Tor is blocked (use bridges).
-
-If you are using a VPN because Tor is blocked, try using a bridge, reasons why:
-
- - They are free.
-
- - They are made for Tor
-
- - Some of them are made to look like regular HTTPS traffic. And some look like they are going to microsoft or amazons cloud.
-
-If bridges don't work, then you can try using a VPN. But I do doubt if using a VPN will actually help.
-
-But if you are trying to hide Tor usage, but not because it could land you in jail or killed:  
-Tor isn't bad, unless you are in a country where Tor is banned (or some other form of anti-Tor) (then you should look at the above statment).  
-You help Tor by using it, and Tor isn't something you need to hide, by proudly using it, you are helping with the bad stigma.  
-And if you are hiding it because you belive you will be put on a list. Well, [there are 2 (or more) million (international) Tor users](https://metrics.torproject.org/userstats-relay-country.html), too many to keep a list on.
+I am a bot, and this comment was done posted automatically.  
+This bot is WIP (Work in progress).  
+[Author of this bot](https://reddit.com/u/hackerncoder)
