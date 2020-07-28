@@ -4,6 +4,7 @@ import praw
 import pdb
 import re
 import os
+import time
 
 #Create reddit bot instance
 reddit = praw.Reddit('autoBot')
@@ -21,7 +22,7 @@ else:
 subreddit = reddit.subreddit('tor')
 
 #Read the 5 newest posts (luckily r/TOR isnt that active)
-while true: 
+while True: 
     for submission in subreddit.new(limit=5):
     
         #Check to ensure we don't spam a post
