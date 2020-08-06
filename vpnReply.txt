@@ -13,6 +13,6 @@ If you use VPN to conceal Tor usage: If Tor isn't banned or blocked, you might n
 
 -----
 
-I am a bot, and this comment was done posted automatically.  
+I am a bot, and this comment was posted automatically.  
 This bot is WIP (Work in progress).  
 [Author of this bot](https://reddit.com/u/hackerncoder)

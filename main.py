@@ -35,7 +35,7 @@ while True:
                 #"Recommend(ed)" Is not fun to do, you could phrase it in so many ways. Check the added txt file - EncMsg
                 if not re.search("don(\')*t use( a)* vpn|\
                         didn(\')*t use( a)* vpn|\
-                        should not (be )* us(e|ing) (a )*vpn|\
+                        should(n(\')*t| not) (be )*us(e|ing) (a )*vpn|\
                         not using( a)* vpn|\
                         will not( be)* us(e|ing)( a)* vpn", submission.selftext, re.IGNORECASE):
             
