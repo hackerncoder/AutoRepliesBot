@@ -37,7 +37,8 @@ while True:
                         didn(\')*t use( a)* vpn|\
                         should(n(\')*t| not) (be )*us(e|ing) (a )*vpn|\
                         not using( a)* vpn|\
-                        will not( be)* us(e|ing)( a)* vpn", submission.selftext, re.IGNORECASE):
+                        will not( be)* us(e|ing)( a)* vpn|\
+                        orbot vpn", submission.selftext, re.IGNORECASE):
             
                     #Put everything in a file to make this code just a little more readable.
                     with open("vpnReply.txt", "r") as f:
