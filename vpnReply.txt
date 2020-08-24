@@ -1,18 +1,14 @@
 Hi!
 
-I'm a bot. And I am here to tell you, that you should probably not use a VPN.
+I'm a bot. And I am here to tell you, that, most of the time, you dont need to use a VPN.
 
-I am not going to write a gigantic (and probably incorrect, bad or something else) post on why you shouldn't since there are so many others that have already done that.
-
-Here is a quick summary:  
-If you use VPN to conceal Tor usage: If Tor isn't banned or blocked, you might not need it. Else, use bridges.
-
-* [VPN + Tor: Not Necessarily a Net Gain](https://matt.traudt.xyz/posts/vpn-tor-not-mRikAa4h.html) By Matt Traudt (aka system33- here on reddit, great person btw.)
+* [VPN + Tor: Not Necessarily a Net Gain](https://matt.traudt.xyz/posts/vpn-tor-not-mRikAa4h.html) By Matt Traudt
 * [r/Tor wiki](https://www.reddit.com/r/TOR/wiki/index#wiki_should_i_use_a_vpn_with_tor.3F_tor_over_vpn.2C_or_vpn_over_tor.3F)
 * [Obscurix: VPNs](https://obscurix.github.io/vpns.html) (Has a section about [the TorPlusVpn on trac.torproject.org](https://trac.torproject.org/projects/tor/wiki/doc/TorPlusVPN), which you should read to understand whenever someone uses it as "Tor project recommends Tor+VPN")
 
 -----
 
 I am a bot, and this comment was posted automatically.  
-This bot is WIP (Work in progress).  
+This bot is Work in progress.  
+(The bot is open source)[https://codeberg.org/encryptedmessage/AutoRepliesBot] (Come help me out).  
 [Author of this bot](https://reddit.com/u/hackerncoder)
