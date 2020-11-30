@@ -28,45 +28,47 @@ while True:
         #Check to ensure we don't spam a post
         if submission.id not in posts_replied_to:
         
-            if re.search("vpn", submission.selftext, re.IGNORECASE):
-                    #RE is regex, anyone that knows regex please help create a string that correctly identifies posts.
+            if submission.link_flair_text == "FAQ":
 
-                #Check for markers for anti-vpn (don't want to add a comment saying VPN bad to someone saying they aren't using vpn).
-                #"Recommend(ed)" Is not fun to do, you could phrase it in so many ways. Check the added txt file - EncMsg
-                if not re.search("don(\')*t use( a)* vpn|\
+                if re.search("vpn", submission.selftext, re.IGNORECASE):
+                        #RE is regex, anyone that knows regex please help create a string that correctly identifies posts.
+
+                    #Check for markers for anti-vpn (don't want to add a comment saying VPN bad to someone saying they aren't using vpn).
+                    #"Recommend(ed)" Is not fun to do, you could phrase it in so many ways. Check the added txt file - HkrNCdr
+                    if not re.search("don(\')*t use( a)* vpn|\
                         didn(\')*t use( a)* vpn|\
                         should(n(\')*t| not) (be )*us(e|ing) (a )*vpn|\
                         not using( a)* vpn|\
                         will not( be)* us(e|ing)( a)* vpn|\
                         orbot vpn", submission.selftext, re.IGNORECASE):
             
-                    #Put everything in a file to make this code just a little more readable.
-                    with open("vpnReply.txt", "r") as f:
+                        #Put everything in a file to make this code just a little more readable.
+                        with open("vpnReply.txt", "r") as f:
                     
-                        #Now reply
-                        submission.reply(f.read())
-            
-                    print("Bot replying to: ", submission.title)
+                            #Now reply
+                            #submission.reply(f.read())
 
-                    #Add the post to our list
-                    posts_replied_to.append(submission.id)
+                            print("Bot replying to: ", submission.title)
+
+                        #Add the post to our list
+                        posts_replied_to.append(submission.id)
         
-            #Working on letterboxing 
-            #if re.search("fill(.*)screen|full(.*)(screen|window)|entire(.*)screen", submission.title, re.IGNORECASE)
+                #Working on letterboxing 
+                #if re.search("fill(.*)screen|full(.*)(screen|window)|entire(.*)screen", submission.title, re.IGNORECASE)
                     #I have seen some people use:
                     # (white|black) border(s), padding(s), bar(s)
-                    #I want to look into ensuring they are also caught in the regex. - EncMsg
+                    #I want to look into ensuring they are also caught in the regex. - HkrNCdr
 
-                #with open("lbReply.txt", "r") as f:
-                #    submission.reply(f.read())
-                #print("Bot replying to: ", submission.title)
-                #posts_replied_to.append(submission.id)
+                    #with open("lbReply.txt", "r") as f:
+                    #    submission.reply(f.read())
+                    #print("Bot replying to: ", submission.title)
+                    #posts_replied_to.append(submission.id)
 
-            #Working on IOS
-            #if re.search("tor(.*)ios", submission.title, re.IGNORECASE)
-                    #The current regex would pull in too many false-positivies. - EncMsg
+                #Working on IOS
+                #if re.search("tor(.*)ios", submission.title, re.IGNORECASE)
+                    #The current regex would pull in too many false-positivies. - HkrNCdr
 
-            #I remember seeing so many things that could be automated. PLEASE SOMEONE HELP ME. - EncMsg 
+                #I remember seeing so many things that could be automated. PLEASE SOMEONE HELP ME. - HkrNCdr 
 
     #Overwrite the posts_replied_to.txt with current list
     with open("posts_replied_to.txt", "w") as f:

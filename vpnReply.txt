@@ -5,10 +5,10 @@ I'm a bot. And I am here to tell you, that, most of the time, you dont need to u
 * [VPN + Tor: Not Necessarily a Net Gain](https://matt.traudt.xyz/posts/vpn-tor-not-mRikAa4h.html) By Matt Traudt
 * [r/Tor wiki](https://www.reddit.com/r/TOR/wiki/index#wiki_should_i_use_a_vpn_with_tor.3F_tor_over_vpn.2C_or_vpn_over_tor.3F)
 * [Obscurix: VPNs](https://obscurix.github.io/vpns.html) (Has a section about [the TorPlusVpn on trac.torproject.org](https://trac.torproject.org/projects/tor/wiki/doc/TorPlusVPN), which you should read to understand whenever someone uses it as "Tor project recommends Tor+VPN")
+* [Very Precarious Narrative](https://schub.wtf/blog/2019/04/08/very-precarious-narrative.html)
 
 -----
 
 I am a bot, and this comment was posted automatically.  
 This bot is Work in progress.  
-(The bot is open source)[https://codeberg.org/encryptedmessage/AutoRepliesBot] (Come help me out).  
-[Author of this bot](https://reddit.com/u/hackerncoder)
+[The bot is open source](https://github.com/hackerncoder/AutoRepliesBot) (Come help me out).  
