@@ -46,7 +46,7 @@ while True:
                         with open("vpnReply.txt", "r") as f:
                     
                             #Now reply
-                            #submission.reply(f.read())
+                            submission.reply(f.read())
 
                             print("Bot replying to: ", submission.title)
 
