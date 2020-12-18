@@ -132,3 +132,6 @@ dmypy.json
 #The praw.ini is confidential
 praw.ini
 .praw.ini.swp
+
+#No need to git this file.
+posts_replied_to.txt
