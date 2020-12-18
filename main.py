@@ -69,6 +69,12 @@ while True:
                     #The current regex would pull in too many false-positivies. - HkrNCdr
 
                 #I remember seeing so many things that could be automated. PLEASE SOMEONE HELP ME. - HkrNCdr 
+    for mention in reddit.inbox.mentions(limit=10):
+        submission = mention.submission
+        if not submission.id in posts_replied_to:
+            with open("vpnReply.txt", "r") as f:
+                submission.reply(f.read())
+            posts_replied_to.append(submission.id)
 
     #Overwrite the posts_replied_to.txt with current list
     with open("posts_replied_to.txt", "w") as f:
