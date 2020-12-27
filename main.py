@@ -73,7 +73,7 @@ while True:
         submission = mention.submission
         if not submission.id in posts_replied_to:
             with open("vpnReply.txt", "r") as f:
-                submission.reply(f.read())
+                mention.reply(f.read())
             posts_replied_to.append(submission.id)
 
     #Overwrite the posts_replied_to.txt with current list
