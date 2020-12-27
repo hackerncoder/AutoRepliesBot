@@ -52,27 +52,15 @@ while True:
 
                         #Add the post to our list
                         posts_replied_to.append(submission.id)
-        
-                #Working on letterboxing 
-                #if re.search("fill(.*)screen|full(.*)(screen|window)|entire(.*)screen", submission.title, re.IGNORECASE)
-                    #I have seen some people use:
-                    # (white|black) border(s), padding(s), bar(s)
-                    #I want to look into ensuring they are also caught in the regex. - HkrNCdr
-
-                    #with open("lbReply.txt", "r") as f:
-                    #    submission.reply(f.read())
-                    #print("Bot replying to: ", submission.title)
-                    #posts_replied_to.append(submission.id)
-
-                #Working on IOS
-                #if re.search("tor(.*)ios", submission.title, re.IGNORECASE)
-                    #The current regex would pull in too many false-positivies. - HkrNCdr
-
-                #I remember seeing so many things that could be automated. PLEASE SOMEONE HELP ME. - HkrNCdr 
+                    
     for mention in reddit.inbox.mentions(limit=10):
         if not mention.submission.id in posts_replied_to:
-            with open("vpnReply.txt", "r") as f:
-                mention.reply(f.read())
+            if re.search("u\/AutoRepliesBot.{0,4}(mobile|android|ios)", mention.body, re.IGNORECASE):
+                with open("mobileReply.txt", "r") as f:
+                    mention.reply(f.read())
+            else:
+                with open("vpnReply.txt", "r") as f:
+                    mention.reply(f.read())
             posts_replied_to.append(mention.submission.id)
 
     #Overwrite the posts_replied_to.txt with current list
