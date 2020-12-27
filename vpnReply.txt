@@ -7,7 +7,7 @@ I'm a bot. And I am here to tell you, that, most of the time, you dont need to u
 * [Very Precarious Narrative](https://schub.wtf/blog/2019/04/08/very-precarious-narrative.html)
 
 
-You may see some people linking to something called "trac" specifically a page called ("TorPlusVPN")[https://trac.torproject.org/projects/tor/wiki/doc/TorPlusVPN]. They may also be saying that the page shows that the Tor developers are recommending the use of a VPN, this is not true, trac works like wikipedia, anyone can edit the pages, as stated: "Most of the content here is written by volunteers from around the world."
+You may see some people linking to something called "trac" specifically a page called ["TorPlusVPN"](https://trac.torproject.org/projects/tor/wiki/doc/TorPlusVPN). They may also be saying that the page shows that the Tor developers are recommending the use of a VPN, this is not true, trac works like wikipedia, anyone can edit the pages, as stated: "Most of the content here is written by volunteers from around the world."
 
 -----
 
