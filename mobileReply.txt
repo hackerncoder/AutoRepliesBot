@@ -1,0 +1,23 @@
+Hello, and thank you for asking the FAQ "Which Tor app for iOS/Android should I use?" or "Should I use Orbot, Orfox, or Tor Browser for Android? What's the difference?"
+#Mobile
+##iOS
+
+There is no official Tor app that is developed by or maintained by the Tor Project. If you trust the Tor Project, that does not necessarily mean you should trust arbitrary Tor apps you find in the iOS store. Maybe they work. Maybe they are safe.
+
+That being said, recently the Tor Project has [endorsed the open source Onion Browser](https://blog.torproject.org/blog/tor-heart-onion-browser-and-more-ios-tor), which is available on the App Store [here](https://itunes.apple.com/us/app/onion-browser/id519296448?mt=8&at=10l9R4).
+
+No other app for iOS has Tor Project's blessing and you're on your own if you use them.
+##Android
+
+Use [Tor Browser for Android](https://play.google.com/store/apps/details?id=org.torproject.torbrowser) to browse the web.
+
+But what about Orbot and Orfox? What are those? Are they good? Are they maintained? Should they be used? And what about the Alpha version of Tor Browser for Android?
+
+ * [Orbot isn't going away. It will keep getting worked on.](https://blog.torproject.org/comment/281767#comment-281767) (boklm is one of the Tor Browser developers, and would know this to be true).
+ * [Orfox will no longer be maintained](https://blog.torproject.org/orfox-paved-way-tor-browser-android) and is replaced by Tor Browser for Android.
+ * Tor Browser for Android takes the place of Orfox with the added benefit of not needing Orbot to be installed/running. [Release announcement](https://blog.torproject.org/new-release-tor-browser-85)
+ * Tor Browser for Android (Alpha) is a potentially buggy and dangerous version of Tor Browser for Andoid that exists for developers to use and find problems.
+
+[Orbot](https://play.google.com/store/apps/details?id=org.torproject.android) is developed by the Guardian Project and endorsed by the Tor Project. It is a tiny little wrapper around Tor that allows other apps to proxy over the Tor network. It has a VPN mode that uses Android's built-in VPN functionality to force some/all apps over Tor; **it does not magically make you more secure and it does not add a VPN to your connection.**
+
+No other app for Android has Tor Project's blessing and you're on your own if you use them.
