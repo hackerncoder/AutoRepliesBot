@@ -70,11 +70,10 @@ while True:
 
                 #I remember seeing so many things that could be automated. PLEASE SOMEONE HELP ME. - HkrNCdr 
     for mention in reddit.inbox.mentions(limit=10):
-        submission = mention.submission
-        if not submission.id in posts_replied_to:
+        if not mention.submission.id in posts_replied_to:
             with open("vpnReply.txt", "r") as f:
                 mention.reply(f.read())
-            posts_replied_to.append(submission.id)
+            posts_replied_to.append(mention.submission.id)
 
     #Overwrite the posts_replied_to.txt with current list
     with open("posts_replied_to.txt", "w") as f:
