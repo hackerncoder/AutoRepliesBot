@@ -6,6 +6,9 @@ import re
 import os
 import time
 
+#Bot's ending
+replyEnd = "\n-----\n\nI am a bot, and this comment was posted automatically.\nThis bot is Work in progress.\n[The bot is open source](https://github.com/hackerncoder/AutoRepliesBot) (Come help me out)."
+
 #Create reddit bot instance
 reddit = praw.Reddit('autoBot')
 
@@ -17,7 +20,7 @@ else:
         posts_replied_to = f.read()
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
-
+        
 #Point the bot at r/TOR
 subreddit = reddit.subreddit('tor')
 
@@ -57,7 +60,10 @@ while True:
         if not mention.submission.id in posts_replied_to:
             if re.search("u\/AutoRepliesBot.{0,4}(mobile|android|ios)", mention.body, re.IGNORECASE):
                 with open("mobileReply.txt", "r") as f:
-                    mention.reply(f.read())
+                    mention.reply(f.read() + replyEnd)
+            elif re.search("u\/AutoRepliesBot.{0,4}letterboxing", mention.body, re.IGNORECASE):
+                with open("letterboxingReply.txt", "r") as f:
+                    mention.reply(f.read() + replyEnd)
             else:
                 with open("vpnReply.txt", "r") as f:
                     mention.reply(f.read())
