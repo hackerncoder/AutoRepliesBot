@@ -1,4 +1,4 @@
-Hello, and thank you for asking the this FAQ.
+Hello, and thank you for asking this FAQ.
 
 It is called letterboxing and is here because your screen size can be used to fingerprint you. If possible, do not maximize Tor Browser, keep it at the size it starts with.
 
