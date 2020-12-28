@@ -1,0 +1,9 @@
+Hello, and thank you for asking the this FAQ.
+
+It is called letterboxing and is here because your screen size can be used to fingerprint you. If possible, do not maximize Tor Browser, keep it at the size it starts with.
+
+No, [a common screen size does not help](
+https://old.reddit.com/r/TOR/comments/ebwcte/does_changing_the_window_size_still_reduce_my/fb7mjmp/)
+
+More reading:
+[Tor Projects page on Letterboxing](https://support.torproject.org/tbb/maximized-torbrowser-window/)
