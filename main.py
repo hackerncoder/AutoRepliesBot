@@ -74,4 +74,4 @@ while True:
         for posts_id in posts_replied_to:
             f.write(posts_id + "\n")
 
-    time.sleep(600)
+    time.sleep(120)
