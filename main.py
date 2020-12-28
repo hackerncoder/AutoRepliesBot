@@ -49,7 +49,7 @@ while True:
                         with open("vpnReply.txt", "r") as f:
                     
                             #Now reply
-                            submission.reply(f.read())
+                            submission.reply(f.read() + replyEnd)
 
                             print("Bot replying to: ", submission.title)
 
@@ -66,7 +66,7 @@ while True:
                     mention.reply(f.read() + replyEnd)
             else:
                 with open("vpnReply.txt", "r") as f:
-                    mention.reply(f.read())
+                    mention.reply(f.read() + replyEnd)
             posts_replied_to.append(mention.submission.id)
 
     #Overwrite the posts_replied_to.txt with current list
