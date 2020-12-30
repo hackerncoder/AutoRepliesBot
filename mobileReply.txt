@@ -21,3 +21,5 @@ But what about Orbot and Orfox? What are those? Are they good? Are they maintain
 [Orbot](https://play.google.com/store/apps/details?id=org.torproject.android) is developed by the Guardian Project and endorsed by the Tor Project. It is a tiny little wrapper around Tor that allows other apps to proxy over the Tor network. It has a VPN mode that uses Android's built-in VPN functionality to force some/all apps over Tor; **it does not magically make you more secure and it does not add a VPN to your connection.**
 
 No other app for Android has Tor Project's blessing and you're on your own if you use them.
+
+Thanks to system33- for providing this copypasta.
