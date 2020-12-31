@@ -3,8 +3,8 @@ Hi!
 I'm a bot. And I am here to tell you, that, most of the time, you dont need to use a VPN.
 
 * [VPN + Tor: Not Necessarily a Net Gain](https://matt.traudt.xyz/posts/vpn-tor-not-mRikAa4h.html) By Matt Traudt
-* [r/Tor wiki](https://www.reddit.com/r/TOR/wiki/index#wiki_should_i_use_a_vpn_with_tor.3F_tor_over_vpn.2C_or_vpn_over_tor.3F)
-* [Very Precarious Narrative](https://schub.wtf/blog/2019/04/08/very-precarious-narrative.html)
+* [r/Tor wiki](https://www.reddit.com/r/TOR/wiki/index#wiki_should_i_use_a_vpn_with_tor.3F_tor_over_vpn.2C_or_vpn_over_tor.3F) (Mostly the same as the above, just condensed) 
+* [Very Precarious Narrative](https://schub.wtf/blog/2019/04/08/very-precarious-narrative.html) (Why VPNs aren't great in general)
 
 
 You may see some people linking to something called "trac" specifically a page called ["TorPlusVPN"](https://trac.torproject.org/projects/tor/wiki/doc/TorPlusVPN). They may also be saying that the page shows that the Tor developers are recommending the use of a VPN, this is not true, trac works like wikipedia, anyone can edit the pages, as stated: "Most of the content here is written by volunteers from around the world."
