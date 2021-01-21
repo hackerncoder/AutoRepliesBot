@@ -1,0 +1,7 @@
+Hello, and thank you for asking the FAQ "Tor is blocked by a website, what can I do?".
+
+There are some [ad-hoc solutions](https://gitlab.torproject.org/legacy/trac/-/wikis/org/doc/ListOfServicesBlockingTor#ad-hoc-solutions-for-accessing-blocked-content-on-tor) that might work. Do note that all of these solutions should not be used if you need to login (and some do not work if you need to post a comment or otherwise send content to the website)
+
+Another solution is to click "New Tor Circuit for this Site", see if that unblocks the website, if not click again, repeat until it works or you give up.
+
+The best thing you can do is send the website a message asking them to reconsider blocking Tor.
