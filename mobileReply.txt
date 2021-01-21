@@ -4,7 +4,7 @@ Hello, and thank you for asking the FAQ "Which Tor app for iOS/Android should I 
 
 There is no official Tor app that is developed by or maintained by the Tor Project. If you trust the Tor Project, that does not necessarily mean you should trust arbitrary Tor apps you find in the iOS store. Maybe they work. Maybe they are safe.
 
-That being said, recently the Tor Project has [endorsed the open source Onion Browser](https://blog.torproject.org/blog/tor-heart-onion-browser-and-more-ios-tor), which is available on the App Store [here](https://itunes.apple.com/us/app/onion-browser/id519296448?mt=8&at=10l9R4).
+That being said, the Tor Project has [endorsed the open source Onion Browser](https://blog.torproject.org/blog/tor-heart-onion-browser-and-more-ios-tor), which is available on the App Store [here](https://itunes.apple.com/us/app/onion-browser/id519296448?mt=8&at=10l9R4).
 
 No other app for iOS has Tor Project's blessing and you're on your own if you use them.
 ##Android
