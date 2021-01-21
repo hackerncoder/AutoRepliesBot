@@ -64,6 +64,9 @@ while True:
             elif re.search("u\/AutoRepliesBot.{0,4}letterboxing", mention.body, re.IGNORECASE):
                 with open("letterboxingReply.txt", "r") as f:
                     mention.reply(f.read() + replyEnd)
+            elif re.search("u\/AutoRepliesBot.{0,4}(blocked|tor blocking website(s)*)", mention.body, re.IGNORECASE):
+                with open("blockingReply.txt", "r") as f:
+                    mention.reply(f.read() + replyEnd)
             else:
                 with open("vpnReply.txt", "r") as f:
                     mention.reply(f.read() + replyEnd)
