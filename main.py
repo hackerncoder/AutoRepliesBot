@@ -50,12 +50,18 @@ while True:
                     
                             #Now reply
                             submission.reply(f.read() + replyEnd)
-
-                            print("Bot replying to: ", submission.title)
-
+                            
                         #Add the post to our list
                         posts_replied_to.append(submission.id)
-                    
+            if re.search("ios", submission.title, re.IGNORECASE):
+                with open("mobileReply.txt", "r") as f:
+                    replyText = "Hello! I couldn't help but notice that you put IOS in your title. Many people ask about how to install Tor on IOS, so I would just answer that question.\n"
+                    for i, line in enumerate(f):
+                        if i > 4 && i < 10:
+                            reply += line + "\n"
+                    submission.reply(replyText + replyEnd)
+                posts_replied_to.append(submission.id)            
+            
     for mention in reddit.inbox.mentions(limit=10):
         if not mention.submission.id in posts_replied_to:
             if re.search("u\/AutoRepliesBot.{0,4}(mobile|android|ios)", mention.body, re.IGNORECASE):
