@@ -7,7 +7,7 @@ import os
 import time
 
 #Bot's ending
-replyEnd = "\n-----\n\nI am a bot, and this comment was posted automatically.  \nThis bot is Work in progress.  \n[The bot is open source](https://github.com/hackerncoder/AutoRepliesBot) (Come help me out)."
+replyEnd = "\n-----\n\nI am a bot, and this comment was posted automatically.  \nThis bot is Work in progress.  \n[The bot is open source](https://github.com/hackerncoder/AutoRepliesBot) (Come help me out).  \nThe subreddit (r/autorepliesBot) is currently missing moderators, would anyone be so kind to request it and give it to the bot?"
 
 #Create reddit bot instance
 reddit = praw.Reddit('autoBot')
