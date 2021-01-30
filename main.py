@@ -57,7 +57,7 @@ while True:
                 with open("mobileReply.txt", "r") as f:
                     replyText = "Hello! I couldn't help but notice that you put IOS in your title. Many people ask about how to install Tor on IOS, so I would just answer that question.\n"
                     for i, line in enumerate(f):
-                        if i > 4 and i < 10:
+                        if i > 4 and i < 9:
                             replyText += line + "\n"
                     submission.reply(replyText + replyEnd)
                 posts_replied_to.append(submission.id)            
