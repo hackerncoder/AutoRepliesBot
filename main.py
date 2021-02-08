@@ -27,7 +27,7 @@ else:
     with open("mentions_replied_to.txt", "r") as f:
         mentions_replied_to = f.read()
         mentions_replied_to = mentions_replied_to.split("\n")
-        mentions.replied_to = list(filter(None, mentions_replied_to)))
+        mentions.replied_to = list(filter(None, mentions_replied_to))
 
 #Point the bot at r/TOR
 subreddit = reddit.subreddit('tor')
