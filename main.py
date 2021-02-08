@@ -71,7 +71,7 @@ while True:
                 posts_replied_to.append(submission.id)            
             
     for mention in reddit.inbox.mentions(limit=10):
-        if not mention.submission.id in posts_replied_to:
+        if not mention.submission.id in mentions_replied_to:
             if re.search("u\/AutoRepliesBot.{0,4}(mobile|android|ios)", mention.body, re.IGNORECASE):
                 with open("mobileReply.txt", "r") as f:
                     mention.reply(f.read() + replyEnd)
