@@ -1,7 +1,8 @@
-Hello, and thank you for asking this FAQ.
+Hello, and thank you for asking the FAQ "What are these bars?".
 
 It is called letterboxing and is here because your screen size can be used to fingerprint you.  
-The best thing you can do is to just not maximize Tor Browser, keep it at the size it starts with.  
+The best thing you can do is to just not maximize Tor Browser, keep it at the size it starts with. Of course that may not always be possible, so to lower the fingerpriting that can be done letterboxing was implimented.  
+
 Removing it is not recommended.
 
 No, [a common screen size does not help](
