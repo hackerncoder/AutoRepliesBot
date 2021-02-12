@@ -1,6 +1,6 @@
 Hi!
 
-I'm a bot. And I am here to tell you, that using a VPN with Tor is not a requirement, and is adviced against. [The Tor Project recommends against it](https://support.torproject.org/faq/faq-5/)
+I'm a bot, and I'd like to let you know that using a VPN with Tor is not a requirement, and isn't advised. [The Tor Project recommends against it](https://support.torproject.org/faq/faq-5/)
 
 * [VPN + Tor: Not Necessarily a Net Gain](https://matt.traudt.xyz/posts/vpn-tor-not-mRikAa4h.html) By Matt Traudt (formerly at Tor Project)
 * [r/Tor wiki](https://www.reddit.com/r/TOR/wiki/index#wiki_should_i_use_a_vpn_with_tor.3F_tor_over_vpn.2C_or_vpn_over_tor.3F) (Mostly the same as above, just condensed) 
