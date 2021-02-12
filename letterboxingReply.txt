@@ -3,10 +3,10 @@ Hello, and thank you for asking the FAQ "What are these bars?".
 It is called letterboxing and is here because your screen size can be used to fingerprint you.  
 The best thing you can do is to just not maximize Tor Browser, keep it at the size it starts with. Of course that may not always be possible, so to lower the fingerpriting that can be done letterboxing was implimented.  
 
-Removing it is not recommended.
+Those bars/the border is called letterboxing. Letterboxing is a privacy technique used by Tor browser which prevents websites from using the size of your screen to identify you. Having a common screen size [is not a good defense](
+https://old.reddit.com/r/TOR/comments/ebwcte/does_changing_the_window_size_still_reduce_my/fb7mjmp/). The result of letterboxing is bars on the sides and bottom of your sceen which may take some getting used to.
 
-No, [a common screen size does not help](
-https://old.reddit.com/r/TOR/comments/ebwcte/does_changing_the_window_size_still_reduce_my/fb7mjmp/)
+Though the bars are annoying at first, they are important for preserving privacy.
 
 More reading:
 [Tor Projects page on Letterboxing](https://support.torproject.org/tbb/maximized-torbrowser-window/)
