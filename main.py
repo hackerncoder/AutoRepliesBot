@@ -88,7 +88,7 @@ while True:
                             replyText += line
                     mention.reply(replyText + replyEnd)
             
-            elif re.search("u\/AutoRepliesBot.{0,4}(ios)", mention.body, re.IGNORECASE):
+            elif re.search("u\/AutoRepliesBot.{0,4}(mobile)", mention.body, re.IGNORECASE):
                 with open("mobileReply.txt", "r") as f:
                     mention.reply(f.read() + replyEnd)
             
