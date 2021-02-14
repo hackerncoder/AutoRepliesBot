@@ -7,7 +7,7 @@ import os
 import time
 
 #Bot's ending
-replyEnd = "\n-----\n\nI am a bot, and this comment was posted automatically.  \nThis bot is Work in progress. [Github](https://github.com/hackerncoder/AutoRepliesBot) (Come help me out).  \nr/AutoRepliesBot"
+replyEnd = "\n-----\n\nI am a bot, and this comment was posted automatically.  \nThis bot is Work in progress. [Github](https://github.com/hackerncoder/AutoRepliesBot) (Come help me out).  \n[How does the bot work?](https://old.reddit.com/r/autorepliesbot/comments/liamo7/how_the_bot_works_and_more/)"
 
 #Create reddit bot instance
 reddit = praw.Reddit('autoBot')
