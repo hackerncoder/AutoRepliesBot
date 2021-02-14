@@ -72,9 +72,26 @@ while True:
             
     for mention in reddit.inbox.mentions(limit=10):
         if not mention.id in mentions_replied_to:
-            if re.search("u\/AutoRepliesBot.{0,4}(mobile|android|ios)", mention.body, re.IGNORECASE):
+            if re.search("u\/AutoRepliesBot.{0,4}(ios)", mention.body, re.IGNORECASE):
+                   with open("mobileReply.txt", "r") as f:
+                    replyText = ""
+                    for i, line in enumerate(f):
+                        if i > 2 and i < 9:
+                            replyText += line
+                    mention.reply(replyText + replyEnd)
+            
+            elif re.search("u\/AutoRepliesBot.{0,4}(android)", mention.body, re.IGNORECASE):
+                with open("mobileReply.txt", "r") as f:
+                    replyText = ""
+                    for i, line in enumerate(f):
+                        if i > 11 and i < 23:
+                            replyText += line
+                    mention.reply(replyText + replyEnd)
+            
+            elif re.search("u\/AutoRepliesBot.{0,4}(ios)", mention.body, re.IGNORECASE):
                 with open("mobileReply.txt", "r") as f:
                     mention.reply(f.read() + replyEnd)
+            
             elif re.search("u\/AutoRepliesBot.{0,4}letterboxing", mention.body, re.IGNORECASE):
                 with open("letterboxingReply.txt", "r") as f:
                     mention.reply(f.read() + replyEnd)
