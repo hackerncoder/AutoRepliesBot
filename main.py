@@ -84,7 +84,7 @@ while True:
                 with open("mobileReply.txt", "r") as f:
                     replyText = ""
                     for i, line in enumerate(f):
-                        if i > 11 and i < 23:
+                        if i > 10 and i < 23:
                             replyText += line
                     mention.reply(replyText + replyEnd)
             
