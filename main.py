@@ -81,7 +81,8 @@ while True:
                     mention.reply(replyText + replyEnd)
             
             elif re.search("u\/AutoRepliesBot.{0,4}(android)", mention.body, re.IGNORECASE):
-                with open("mobileReply.txt", "r") as f:
+                #add androidReply.txt later
+                with open("androidReply.txt", "r") as f:
                     replyText = ""
                     for i, line in enumerate(f):
                         if i > 10 and i < 23:
