@@ -1,0 +1,16 @@
+Hello, and thank you for asking the FAQ "Which Tor app for Android should I use?" or "Should I use Orbot, Orfox, or Tor Browser for Android? What's the difference?"
+
+Use [Tor Browser for Android](https://play.google.com/store/apps/details?id=org.torproject.torbrowser) to browse the web.
+
+But what about Orbot and Orfox? What are those? Are they good? Are they maintained? Should they be used? And what about the Alpha version of Tor Browser for Android?
+
+ * [Orbot isn't going away. It will keep getting worked on.](https://blog.torproject.org/comment/281767#comment-281767) (boklm is one of the Tor Browser developers, and would know this to be true).
+ * [Orfox will no longer be maintained](https://blog.torproject.org/orfox-paved-way-tor-browser-android) and is replaced by Tor Browser for Android.
+ * Tor Browser for Android takes the place of Orfox with the added benefit of not needing Orbot to be installed/running. [Release announcement](https://blog.torproject.org/new-release-tor-browser-85)
+ * Tor Browser for Android (Alpha) is a potentially buggy and dangerous version of Tor Browser for Andoid that exists for developers to use and find problems.
+
+[Orbot](https://play.google.com/store/apps/details?id=org.torproject.android) is developed by the Guardian Project and endorsed by the Tor Project. It is a tiny little wrapper around Tor that allows other apps to proxy over the Tor network. It has a VPN mode that uses Android's built-in VPN functionality to force some/all apps over Tor; **it does not magically make you more secure and it does not add a VPN to your connection.**
+
+No other app for Android has Tor Project's blessing and you're on your own if you use them.
+
+Thanks to system33- for providing this copypasta.
