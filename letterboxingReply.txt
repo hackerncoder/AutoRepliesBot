@@ -5,7 +5,7 @@ https://old.reddit.com/r/TOR/comments/ebwcte/does_changing_the_window_size_still
 
 Though the bars are annoying at first, they are important for preserving privacy.
 
-In the event that you fully understand the security concerns yet still wish to disable the feature you can do so by going to `about:config` and set `privacy.resistFingerprinting.letterboxing` to false.
+In the event that you fully understand the security concerns yet still wish to disable this feature you can do so by going to `about:config` and set `privacy.resistFingerprinting.letterboxing` to false.
 
 More reading:
 [Tor Projects page on Letterboxing](https://support.torproject.org/tbb/maximized-torbrowser-window/)
