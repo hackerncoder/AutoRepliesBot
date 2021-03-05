@@ -63,7 +63,7 @@ while True:
                     #    posts_replied_to.append(submission.id)
             if re.search("ios|iphone", submission.title, re.IGNORECASE):
                 with open("mobileReply.txt", "r") as f:
-                    replyText = "Hello! I couldn't help but notice that you put IOS or Iphone in your title. Many people ask about how to install Tor on IOS, so I would just answer that question.\n"
+                    replyText = "Hello! I couldn't help but notice that you put IOS or Iphone in your title. Many people ask about how to install Tor on IOS, so I would just answer that question.\n------\n\n"
                     for i, line in enumerate(f):
                         if i > 2 and i < 9:
                             replyText += line
