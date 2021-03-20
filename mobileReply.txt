@@ -2,11 +2,12 @@ Hello, and thank you for asking the FAQ "Which Tor app for iOS/Android should I 
 #Mobile
 ##iOS
 
-There is no official Tor app that is developed by or maintained by the Tor Project. If you trust the Tor Project, that does not necessarily mean you should trust arbitrary Tor apps you find in the iOS store. Maybe they work. Maybe they are safe.
+There is no official iOS Tor (Browser) app that is developed by or maintained by the Tor Project. If you trust the Tor Project, that does not necessarily mean you should trust arbitrary Tor apps you find in the iOS store. Maybe they work. Maybe they are safe.
 
 That being said, the Tor Project has [endorsed the open source Onion Browser](https://blog.torproject.org/blog/tor-heart-onion-browser-and-more-ios-tor), which is available on the App Store [here](https://itunes.apple.com/us/app/onion-browser/id519296448?mt=8&at=10l9R4).
 
 No other app for iOS has Tor Project's blessing and you're on your own if you use them.
+
 ##Android
 
 Use [Tor Browser for Android](https://play.google.com/store/apps/details?id=org.torproject.torbrowser) to browse the web.
@@ -21,5 +22,3 @@ But what about Orbot and Orfox? What are those? Are they good? Are they maintain
 [Orbot](https://play.google.com/store/apps/details?id=org.torproject.android) is developed by the Guardian Project and endorsed by the Tor Project. It is a tiny little wrapper around Tor that allows other apps to proxy over the Tor network. It has a VPN mode that uses Android's built-in VPN functionality to force some/all apps over Tor; **it does not magically make you more secure and it does not add a VPN to your connection.**
 
 No other app for Android has Tor Project's blessing and you're on your own if you use them.
-
-Thanks to system33- for providing this copypasta.
