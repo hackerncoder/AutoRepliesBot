@@ -30,6 +30,13 @@ else:
         mentions_replied_to = f.read()
         mentions_replied_to = mentions_replied_to.split("\n")
         mentions_replied_to = list(filter(None, mentions_replied_to))
+if not os.path.usfile("torblog.txt"):
+    torblog = []
+else:
+    with open("torblog.txt", "r") as f:
+        torblog = f.read()
+        torblog = torblog.split("\n")
+        torblog = list(filter(None, torblog))
 
 #Point the bot at r/TOR
 subreddit = reddit.subreddit('tor')
@@ -117,5 +124,8 @@ while True:
         TorBlogFeed = feedparser.parse("https://blog.torproject.org/feed")
         entry = TorBlogFeed.entries[1]
         if re.search("new release: tor browser", entry.title, re.IGNORECASE):
-            subreddit.submit(entry.title, url=entry.link)
+            if entry.link not in torblog:
+                subreddit.submit(entry.title, url=entry.link)
+                with open("torblog.txt", "w") as f:
+                    f.write(entry.link + "\n")
     time.sleep(120)
