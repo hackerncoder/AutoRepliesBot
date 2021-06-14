@@ -5,6 +5,8 @@ import pdb
 import re
 import os
 import time
+from datetime import datetime
+import feedparser
 
 #Bot's ending
 replyEnd = "\n-----\n\nI am a bot, and this comment was posted automatically.  \nThis bot is Work in progress. [Github](https://github.com/hackerncoder/AutoRepliesBot) (Come help me out).  \n[How does the bot work?](https://reddit.com/r/autorepliesbot/comments/liamo7/how_the_bot_works_and_more/)"
@@ -111,4 +113,9 @@ while True:
         for mention_id in mentions_replied_to:
             f.write(mention_id + "\n")
 
+    if datetime.now().time().minute == 00:
+        TorBlogFeed = feedparser.parse("https://blog.torproject.org/feed")
+        entry = TorBlogFeed.entries[1]
+        if re.search("new release: tor browser", entry.title, re.IGNORECASE):
+            subreddit.submit(entry.title, url=entry.link)
     time.sleep(120)
