@@ -30,7 +30,7 @@ else:
         mentions_replied_to = f.read()
         mentions_replied_to = mentions_replied_to.split("\n")
         mentions_replied_to = list(filter(None, mentions_replied_to))
-if not os.path.usfile("torblog.txt"):
+if not os.path.isfile("torblog.txt"):
     torblog = []
 else:
     with open("torblog.txt", "r") as f:
