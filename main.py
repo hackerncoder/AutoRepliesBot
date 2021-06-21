@@ -122,7 +122,7 @@ while True:
 
     if datetime.now().time().minute == 00:
         TorBlogFeed = feedparser.parse("https://blog.torproject.org/feed")
-        entry = TorBlogFeed.entries[1]
+        entry = TorBlogFeed.entries[0]
         if re.search("new release: tor browser", entry.title, re.IGNORECASE):
             if entry.link not in torblog:
                 subreddit.submit(entry.title, url=entry.link)
