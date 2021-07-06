@@ -126,7 +126,7 @@ while True:
         if re.search("new release: tor browser", entry.title, re.IGNORECASE):
             if entry.link not in torblog:
                 releaseSubmission = subreddit.submit(entry.title, url=entry.link)
-                releaseSubmission.mod.flair("Software Release", "", "8eb3a66a-9766-11e9-9c49-0e5278b79bf6")
+                releaseSubmission.mod.flair("Software release", "", "8eb3a66a-9766-11e9-9c49-0e5278b79bf6")
                 torblog.append(entry.link)
                 with open("torblog.txt", "w") as f:
                     f.write(entry.link + "\n")
