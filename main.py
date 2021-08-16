@@ -7,6 +7,14 @@ import os
 import time
 from datetime import datetime
 import feedparser
+import imaplib
+import email
+from email.header import decode_header
+
+imap_user = "autobot@encryptionin.space"
+imap_passwd = os.environ['autobotpasswd']
+
+blogTime = 15
 
 #Bot's ending
 replyEnd = "\n-----\n\nI am a bot, and this comment was posted automatically.  \nThis bot is Work in progress. [Github](https://github.com/hackerncoder/AutoRepliesBot) (Come help me out).  \n[How does the bot work?](https://reddit.com/r/autorepliesbot/comments/liamo7/how_the_bot_works_and_more/)"
@@ -120,7 +128,20 @@ while True:
         for mention_id in mentions_replied_to:
             f.write(mention_id + "\n")
 
-    if datetime.now().time().minute % 15 == 0:
+    imap = imaplib.IMAP4('127.0.0.1')
+    imap.login(imap_user, imap_passwd)
+    imap.select('INBOX')
+    tmp, data = imap.search(None, 'ALL')
+    num = data[0].split()[-0]
+    tmp, data = M.fetch(num, '(RFC822)')
+    msg = email.message_from_bytes(data[0][1])
+    subject, enc = decode_header(msg["Subject"])[0]
+    if subject is "blog post near":
+        blogTime = 5
+    imap.close()
+
+
+    if datetime.now().time().minute % blogTime == 0:
         TorBlogFeed = feedparser.parse("https://blog.torproject.org/feed")
         entry = TorBlogFeed.entries[0]
         if re.search("new release: tor browser", entry.title, re.IGNORECASE):
@@ -130,4 +151,5 @@ while True:
                 torblog.append(entry.link)
                 with open("torblog.txt", "w") as f:
                     f.write(entry.link + "\n")
+            blogTime = 15
     time.sleep(120)
