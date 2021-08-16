@@ -136,7 +136,8 @@ while True:
     tmp, data = imap.fetch(num, '(RFC822)')
     msg = email.message_from_bytes(data[0][1])
     subject, enc = decode_header(msg["Subject"])[0]
-    if subject is "blog post near":
+    if re.search("blog post near", subject, re.IGNORECASE):
+        print(subject)
         blogTime = 5
     imap.close()
 
