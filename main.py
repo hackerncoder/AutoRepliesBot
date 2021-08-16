@@ -133,7 +133,7 @@ while True:
     imap.select('INBOX')
     tmp, data = imap.search(None, 'ALL')
     num = data[0].split()[-0]
-    tmp, data = M.fetch(num, '(RFC822)')
+    tmp, data = imap.fetch(num, '(RFC822)')
     msg = email.message_from_bytes(data[0][1])
     subject, enc = decode_header(msg["Subject"])[0]
     if subject is "blog post near":
