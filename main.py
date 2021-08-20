@@ -132,7 +132,7 @@ while True:
     imap.login(imap_user, imap_passwd)
     imap.select('INBOX')
     tmp, data = imap.search(None, 'ALL')
-    num = data[0].split()[-0]
+    num = data[0].split()[0]
     tmp, data = imap.fetch(num, '(RFC822)')
     msg = email.message_from_bytes(data[0][1])
     subject, enc = decode_header(msg["Subject"])[0]
