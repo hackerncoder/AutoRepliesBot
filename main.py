@@ -120,7 +120,7 @@ while True:
         for mention_id in mentions_replied_to:
             f.write(mention_id + "\n")
 
-    if datetime.now().time().minute % 15 == 0:
+    if datetime.now().time().minute % 10 == 0:
         TorBlogFeed = feedparser.parse("https://blog.torproject.org/feed")
         entry = TorBlogFeed.entries[0]
         if re.search("new release: tor browser", entry.title, re.IGNORECASE):
