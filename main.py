@@ -121,6 +121,7 @@ while True:
             f.write(mention_id + "\n")
 
     if datetime.now().time().minute % 10 == 0:
+        print("checking feed")
         TorBlogFeed = feedparser.parse("https://blog.torproject.org/feed")
         entry = TorBlogFeed.entries[0]
         if re.search("new release: tor browser", entry.title, re.IGNORECASE):
