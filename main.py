@@ -7,6 +7,7 @@ import os
 import time
 from datetime import datetime
 import feedparser
+import requests
 
 #Bot's ending
 replyEnd = "\n-----\n\nI am a bot, and this comment was posted automatically.  \nThis bot is Work in progress. [Github](https://github.com/hackerncoder/AutoRepliesBot) (Come help me out).  \n[How does the bot work?](https://reddit.com/r/autorepliesbot/comments/liamo7/how_the_bot_works_and_more/)"
@@ -99,9 +100,12 @@ while True:
                     r = requests.get(img_url)
                     with open(fn, "wb") as f:
                         f.write(r.content)
+                    
                     arbSub = reddit.subreddit('autorepliesbot')
                     arbSubmission = arbSub.submit_image(title="imgur image for " + submission.id, image_path=fn)
-                    submission.reply("It seems you have linked to an imgur image, Tor Browser and imgur don't play nicely, so I've reuploaded the image here: " + arbSubmission.permalink)
+                    
+                    replyText = "It seems you have linked to an imgur image, Tor Browser and imgur don't play nicely, so I've reuploaded the image here: " + arbSubmission.permalink
+                    submission.reply(replyText + replyEnd)
                     os.remove(fn)
                     imgur_replied_to.append(submission.id)
 
