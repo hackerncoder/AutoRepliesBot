@@ -25,7 +25,7 @@ else:
         posts_replied_to = list(filter(None, posts_replied_to))
         itemsInList = len(posts_replied_to)
         if itemsInList > 10:
-            posts_replied_to = posts_replied_to[:-(itemsInList-10)]
+            posts_replied_to = posts_replied_to[-10:]
 if not os.path.isfile("mentions_replied_to.txt"):
     mentions_replied_to = []
 else:
