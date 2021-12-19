@@ -22,7 +22,9 @@ else:
         posts_replied_to = f.read()
         posts_replied_to = posts_replied_to.split("\n")
         posts_replied_to = list(filter(None, posts_replied_to))
-
+        itemsInList = posts_replied_to.count()
+        if itemsInList > 10:
+            posts_replied_to = posts_replied_to[:-(itemsInList-10)]
 if not os.path.isfile("mentions_replied_to.txt"):
     mentions_replied_to = []
 else:
@@ -37,6 +39,13 @@ else:
         torblog = f.read()
         torblog = torblog.split("\n")
         torblog = list(filter(None, torblog))
+if not os.path.isfile("imgur_replied_to.txt"):
+    imgur_replied_to = []
+else:
+    with open("imgur_replied_to.txt", "r") as f:
+        imgur_replied_to = f.read()
+        imgur_replied_to = imgur_replied_to.split("\n")
+        imgur_replied_to = list(filter(None, imgur_replied_to))
 
 #Point the bot at r/TOR
 subreddit = reddit.subreddit('tor')
@@ -78,7 +87,24 @@ while True:
                             replyText += line
                     submission.reply(replyText + replyEnd)
                 posts_replied_to.append(submission.id)            
-            
+
+            if submission.id not in imgur_replied_to:
+                imgurlink = re.search("imgur\.com\/(.......)", submission.selftext, re.IGNORECASE)
+                if imgurlink:
+                    url = "http://api.imgur.com/2/image/" + imgurlink.group(1) + ".json"
+                    r = requests.get(url)
+                    img_url = r.json["image"]["links"]["original"]
+                    fn = posixpath.basename(urllib.parse.urlsplit(img_url).path)
+                
+                    r = requests.get(img_url)
+                    with open(fn, "wb") as f:
+                        f.write(r.content)
+                    arbSub = reddit.subreddit('autorepliesbot')
+                    arbSubmission = arbSub.submit_image(title="imgur image for " + submission.id, image_path=fn)
+                    submission.reply("It seems you have linked to an imgur image, Tor Browser and imgur don't play nicely, so I've reuploaded the image here: " + arbSubmission.permalink)
+                    os.remove(fn)
+                    imgur_replied_to.append(submission.id)
+
     for mention in reddit.inbox.mentions(limit=10):
         if not mention.id in mentions_replied_to:
             if re.search("u\/AutoRepliesBot.{0,4}(ios)", mention.body, re.IGNORECASE):
@@ -119,6 +145,9 @@ while True:
     with open("mentions_replied_to.txt", "w") as f:
         for mention_id in mentions_replied_to:
             f.write(mention_id + "\n")
+    with open("imgur_replied_to.txt", "w") as f:
+        for imgur_id in imgur_replied_to:
+            f.write(imgur_id + "\n")
 
     TorBlogFeed = feedparser.parse("https://blog.torproject.org/feed")
     entry = TorBlogFeed.entries[0]
