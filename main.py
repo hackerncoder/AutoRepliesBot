@@ -7,7 +7,7 @@ import os
 import time
 from datetime import datetime
 import feedparser
-from imgur-downloader import ImgurDownloader
+#from imgur-downloader import ImgurDownloader
 
 #Bot's ending
 replyEnd = "\n-----\n\nI am a bot, and this comment was posted automatically.  \nThis bot is Work in progress. [Github](https://github.com/hackerncoder/AutoRepliesBot) (Come help me out).  \n[How does the bot work?](https://reddit.com/r/autorepliesbot/comments/liamo7/how_the_bot_works_and_more/)"
