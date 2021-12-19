@@ -7,7 +7,7 @@ import os
 import time
 from datetime import datetime
 import feedparser
-import requests
+from imgur-downloader import ImgurDownloader
 
 #Bot's ending
 replyEnd = "\n-----\n\nI am a bot, and this comment was posted automatically.  \nThis bot is Work in progress. [Github](https://github.com/hackerncoder/AutoRepliesBot) (Come help me out).  \n[How does the bot work?](https://reddit.com/r/autorepliesbot/comments/liamo7/how_the_bot_works_and_more/)"
@@ -89,25 +89,19 @@ while True:
                     submission.reply(replyText + replyEnd)
                 posts_replied_to.append(submission.id)            
 
-            if submission.id not in imgur_replied_to:
-                imgurlink = re.search("imgur\.com\/(.......)", submission.selftext, re.IGNORECASE)
-                if imgurlink:
-                    url = "http://api.imgur.com/2/image/" + imgurlink.group(1) + ".json"
-                    r = requests.get(url)
-                    img_url = r.json["image"]["links"]["original"]
-                    fn = posixpath.basename(urllib.parse.urlsplit(img_url).path)
-                
-                    r = requests.get(img_url)
-                    with open(fn, "wb") as f:
-                        f.write(r.content)
+            #if submission.id not in imgur_replied_to:
+            #    imgurlink = re.search("imgur\.com\/(.......)", submission.selftext, re.IGNORECASE)
+            #    if imgurlink:
+            #        downloader = ImgurDownloader("https://imgur.com/" + imgurlink.group(1))
+            #        downloader.save_images()
+
+            #        arbSub = reddit.subreddit('autorepliesbot')
+            #        arbSubmission = arbSub.submit_image(title="imgur image for " + submission.id, image_path=fn)
                     
-                    arbSub = reddit.subreddit('autorepliesbot')
-                    arbSubmission = arbSub.submit_image(title="imgur image for " + submission.id, image_path=fn)
-                    
-                    replyText = "It seems you have linked to an imgur image, Tor Browser and imgur don't play nicely, so I've reuploaded the image here: " + arbSubmission.permalink
-                    submission.reply(replyText + replyEnd)
-                    os.remove(fn)
-                    imgur_replied_to.append(submission.id)
+            #        replyText = "It seems you have linked to an imgur image, Tor Browser and imgur don't play nicely, so I've reuploaded the image here: " + arbSubmission.permalink
+            #        submission.reply(replyText + replyEnd)
+            #        os.remove(fn)
+            #        imgur_replied_to.append(submission.id)
 
     for mention in reddit.inbox.mentions(limit=10):
         if not mention.id in mentions_replied_to:
